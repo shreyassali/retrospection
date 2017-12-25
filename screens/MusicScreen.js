@@ -40,17 +40,14 @@ export default class LinksScreen extends React.Component {
         decelerationRate={0}
         snapToInterval={width - 60}
         snapToAlignment={"center"}
-        contentInset={{
-          top: 0,
-          left: 30,
-          bottom: 0,
-          right: 30,
-        }}>
+        contentInset={{ top: 0, left: 30, bottom: 0, right: 30, }}>
+
         <View style={styles.view} />
         <View style={styles.view2} />
         <View style={styles.view} />
         <View style={styles.view2} />
         <View style={styles.view} />
+
       </ScrollView>
     );
   }
