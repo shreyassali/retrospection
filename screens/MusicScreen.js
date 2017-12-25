@@ -23,10 +23,12 @@ export default class LinksScreen extends React.Component {
     if(this.state.isLoadingComplete) {
       return;
     }
+    console.log("Music file");
     //Read from firebase
     var audioList = [];
-    firebase.database().ref('audioList').once('value').then(function(snapshot) {
+    firebase.database().ref('/audioList').once('value').then(function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
+        console.log("Music file 2");
         var audio = childSnapshot.val();
         audio.id = childSnapshot.key;
         console.log(audio);

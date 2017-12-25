@@ -1,5 +1,5 @@
 const Environment = require('./Environment');
-const logPrefix = "PMP-GUIDE-LOG-";
+const logPrefix = "RETROSPECTION-LOG-";
 
 /**
  * Log levels supported :
