@@ -2,11 +2,17 @@ import React from 'react';
 import { ScrollView, StyleSheet, Dimensions, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
+import firebase from 'firebase';
 import Banner from '../components/Banner';
 
 const { width } = Dimensions.get('window');
 
 export default class LinksScreen extends React.Component {
+  state = {
+    isLoadingComplete: false,
+    audioList: null
+  };
+
   static navigationOptions = {
     header:(
       <Banner headerText={'Select Your Music'}/>
@@ -23,7 +29,8 @@ export default class LinksScreen extends React.Component {
       snapshot.forEach(function(childSnapshot) {
         var audio = childSnapshot.val();
         audio.id = childSnapshot.key;
-        audioList.push(chapter);
+        console.log(audio);
+        audioList.push(audio);
       });
       return audioList;
     }).then((audioList) => this.setState({isLoadingComplete: true,
