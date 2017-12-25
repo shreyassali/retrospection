@@ -1,11 +1,11 @@
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAPKnrvHFlQeHuaRX_jmFWhu9ScZ4sYL04",
-  authDomain: "pmpguide-b8d72.firebaseapp.com",
-  databaseURL: "https://pmpguide-b8d72.firebaseio.com",
-  projectId: "pmpguide-b8d72",
-  storageBucket: "pmpguide-b8d72.appspot.com",
-  messagingSenderId: "323096544554"
+  apiKey: "AIzaSyBgv7Wi_Ps1NMNmi1sZXpKdBy7TnzZhigo",
+  authDomain: "retrospection-45dcc.firebaseapp.com",
+  databaseURL: "https://retrospection-45dcc.firebaseio.com",
+  projectId: "retrospection-45dcc",
+  storageBucket: "retrospection-45dcc.appspot.com",
+  messagingSenderId: "445389262042"
 };
 
 const Environment = {
