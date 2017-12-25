@@ -1,20 +1,15 @@
 import React from 'react';
-import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { WebBrowser } from 'expo';
 
+import Banner from '../components/Banner';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    header:(
+      <Banner headerText={'Welcome to Mind Retrospection'}/>
+    ),
   };
 
   render() {
