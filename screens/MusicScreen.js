@@ -14,6 +14,20 @@ export default class LinksScreen extends React.Component {
   };
   componentDidMount() {
  		setTimeout(() => {this.scrollView.scrollTo({x: -30}) }, 1) // scroll view position fix
+    if(this.state.isLoadingComplete) {
+      return;
+    }
+    //Read from firebase
+    var audioList = [];
+    firebase.database().ref('audioList').once('value').then(function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        var audio = childSnapshot.val();
+        audio.id = childSnapshot.key;
+        audioList.push(chapter);
+      });
+      return audioList;
+    }).then((audioList) => this.setState({isLoadingComplete: true,
+                  audioList: audioList}));
  	}
 
   render() {
