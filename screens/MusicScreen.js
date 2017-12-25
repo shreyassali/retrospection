@@ -26,7 +26,7 @@ export default class LinksScreen extends React.Component {
     console.log("Music file");
     //Read from firebase
     var audioList = [];
-    firebase.database().ref('/audioList').once('value').then(function(snapshot) {
+    firebase.database().ref('audioList').once('value').then(function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         console.log("Music file 2");
         var audio = childSnapshot.val();
@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     margin: 10,
     height: 200,
     borderRadius: 10,
-    //paddingHorizontal : 30
   },
   view2: {
     marginTop: 100,
@@ -84,6 +83,5 @@ const styles = StyleSheet.create({
     margin: 10,
     height: 200,
     borderRadius: 10,
-    //paddingHorizontal : 30
   },
 });
