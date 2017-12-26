@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Dimensions, View } from 'react-native';
 import { Card, CardItem, Body, Text } from 'native-base';
+
+const { width } = Dimensions.get('window');
 
 export default class MusicCard extends React.Component {
   constructor(props){
@@ -9,12 +11,13 @@ export default class MusicCard extends React.Component {
   render(props){
     return (
       <View style={styles.view}>
-        <Card style={styles.containerStyle}>
+        <Card style={styles.containerStyle} dataArray={this.props.audioList} renderRow={(item) =>
           <CardItem>
             <Body style={styles.bodyStyle}>
-              <Text style={styles.title}> Music Album</Text>
+              <Text style={styles.title}> {item.name} </Text>
             </Body>
           </CardItem>
+        }>
         </Card>
       </View>
     );

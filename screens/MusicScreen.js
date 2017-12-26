@@ -27,27 +27,26 @@ export default class MusicScreen extends React.Component {
       return;
     }
     //Read from firebase
-    var audioList = [];
+    var musicList = [];
     firebase.database().ref('audioList').once('value').then(function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         var audio = childSnapshot.val();
         audio.id = childSnapshot.key;
         console.log(audio);
-        audioList.push(audio);
+        musicList.push(audio);
       });
-      return audioList;
-    }).then((audioList) => this.setState({isLoadingComplete: true,
-                  audioList: audioList}));
+      console.log('Music List' + musicList);
+      return musicList;
+    }).then((musicList) => this.setState({isLoadingComplete: true,
+                  audioList: musicList}));
+    console.log('Audio' + this.state.audioList);
  	}
 
-  _renderItem = ({item}) => (
-    <ChapterCard
-      id={item.id}
-      name={item.name}
-      onPress={() => this._onPressItem(item.id)} />
-  );
+  render () {
+    const {state} = this.props.navigation;
 
-  render() {
+    //console.log('Audio' + this.state.audioList);
+
     return (
 
       <ScrollView
@@ -58,8 +57,8 @@ export default class MusicScreen extends React.Component {
         snapToInterval={width - 60}
         snapToAlignment={"center"}
         contentInset={{ top: 0, left: 30, bottom: 0, right: 30, }}>
-        
-        <MusicCard/>
+
+        <MusicCard audiolist={this.state.audioList}/>
 
       </ScrollView>
     );
