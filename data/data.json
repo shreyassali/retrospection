@@ -22,7 +22,31 @@
 			"name": "Loving Kindness Meditation",
 			"image_url": "https://jasbaku.files.wordpress.com/2012/10/we-bring-to-ourselves-what-we-focus-on.jpg",
 			"track_url": "https://firebasestorage.googleapis.com/v0/b/retrospection-45dcc.appspot.com/o/05_Loving_Kindness_Meditation.mp3?alt=media&token=e8afcb22-4e8c-4d57-99ca-f944cd45bb2c",
-			"time": "10"
+			"time": "9"
+		},
+		{
+			"name": "Zen Garden Music",
+			"image_url": "https://jasbaku.files.wordpress.com/2012/10/we-bring-to-ourselves-what-we-focus-on.jpg",
+			"track_url": "https://firebasestorage.googleapis.com/v0/b/retrospection-45dcc.appspot.com/o/Meditation_21min_ZenGardenMusic.mp3?alt=media&token=e1a34f62-065a-4ddd-9d96-a52f0c39d2dc",
+			"time": "20"
+		},
+		{
+			"name": "Rain and Water Stream",
+			"image_url": "https://jasbaku.files.wordpress.com/2012/10/we-bring-to-ourselves-what-we-focus-on.jpg",
+			"track_url": "https://firebasestorage.googleapis.com/v0/b/retrospection-45dcc.appspot.com/o/Rain%20and%20Water%20Stream.mp3?alt=media&token=4a230245-4082-404a-9485-a7c2cc08d463",
+			"time": "20"
+		},
+		{
+			"name": "Tibetan Bell Sound",
+			"image_url": "https://jasbaku.files.wordpress.com/2012/10/we-bring-to-ourselves-what-we-focus-on.jpg",
+			"track_url": "https://firebasestorage.googleapis.com/v0/b/retrospection-45dcc.appspot.com/o/TibetanBellSound.mp3?alt=media&token=e1d04ab3-0007-4f66-8362-f6db8048adf4",
+			"time": "20"
+		},
+		{
+			"name": "Pine Forest Winter",
+			"image_url": "https://jasbaku.files.wordpress.com/2012/10/we-bring-to-ourselves-what-we-focus-on.jpg",
+			"track_url": "https://firebasestorage.googleapis.com/v0/b/retrospection-45dcc.appspot.com/o/PineForestWinter.mp3?alt=media&token=e6fd6073-0985-4dde-8c9b-0837d35529d6",
+			"time": "20"
 		}
 	]
 }
