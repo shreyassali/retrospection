@@ -1,30 +1,33 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, ImageBackground, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 
 const Banner = (props) => (
-  <SafeAreaView style={styles.bannerContainer} forceInset={{ vertical: 'never' }}>
-    <View style={styles.banner}>
-      <Text style={styles.title}>{props.headerText}</Text>
-    </View>
+  <SafeAreaView forceInset={{ vertical: 'never' }}>
+    <ImageBackground source={require('../assets/images/header.png')} style={styles.bgImage}>
+        <View style={styles.banner}>
+            <Text style={styles.title}>{props.headerText}</Text>
+        </View>
+    </ImageBackground>
   </SafeAreaView>
 );
 
 export default Banner;
 
 const styles = StyleSheet.create({
-  bannerContainer: {
-    backgroundColor: '#673ab7',
+  bgImage: {
+    width: Dimensions.get('window').width,
   },
   banner: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 12,
+    backgroundColor:'transparent',
   },
   title: {
-    fontSize: 19,
-    fontWeight: '200',
+    fontSize: 20,
+    fontWeight: '250',
     color: '#fff',
     margin: 10,
     alignItems: 'center',
