@@ -32,7 +32,7 @@ export default class MusicScreen extends React.Component {
       snapshot.forEach(function(childSnapshot) {
         var audio = childSnapshot.val();
         audio.id = childSnapshot.key;
-        console.log(audio);
+        console.log('one audio at a time' + audio.name);
         musicList.push(audio);
       });
       console.log('Music List' + musicList);

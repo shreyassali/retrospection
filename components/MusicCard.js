@@ -11,12 +11,11 @@ export default class MusicCard extends React.Component {
   render(props){
     return (
       <View style={styles.view}>
-        <Card style={styles.containerStyle} dataArray={this.props.audioList} renderRow={(item) =>
-          <CardItem>
-            <Body style={styles.bodyStyle}>
-              <Text style={styles.title}> {item.name} </Text>
-            </Body>
-          </CardItem>
+        <Card style={styles.containerStyle} dataArray={this.props.audioList}
+          renderRow={(audio) =>
+            <CardItem>
+              <Text style={styles.title}> {audio.name} </Text>
+            </CardItem>
         }>
         </Card>
       </View>
